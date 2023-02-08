@@ -1,5 +1,6 @@
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import SectionProjects from './SectionProjects';
 
 const ThreeScene2 = () => {
   const containerRef = useRef();
@@ -124,6 +125,15 @@ const ThreeScene2 = () => {
     });
   }, []); // Solo se ejecuta una vez al montar el componente
 
-  return <div style={{ height: "100vh" }} ref={containerRef} />
+  return (
+    <div>
+      <div style={{position:"absolute",display: "flex", justifyContent:"center"}}>
+        <SectionProjects/>
+      </div>
+      <div style={{ height: "100vh" }} ref={containerRef} />
+     
+    </div>
+
+  )
 }
 export default ThreeScene2;
