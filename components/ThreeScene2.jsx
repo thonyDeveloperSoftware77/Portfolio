@@ -2,7 +2,7 @@ import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 import SectionProjects from './SectionProjects';
 
-const ThreeScene2 = () => {
+const ThreeScene2 = (props) => {
   const containerRef = useRef();
 
   useEffect(() => {
@@ -127,8 +127,8 @@ const ThreeScene2 = () => {
 
   return (
     <div>
-      <div style={{position:"absolute",display: "flex", justifyContent:"center"}}>
-        <SectionProjects/>
+      <div style={{position:"absolute",display: "flex", justifyContent:"center", flexDirection:"column",alignItems:"center"}}>
+        <props.componente/>
       </div>
       <div style={{ height: "100vh" }} ref={containerRef} />
      

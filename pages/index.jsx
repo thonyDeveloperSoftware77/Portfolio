@@ -3,6 +3,13 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ThreeScene from '../components/ThreeScene'
 import ThreeScene2 from '../components/ThreeScene2';
+import SectionProjects from '../components/SectionProjects';
+import SectionSkills from '../components/SectionSkills';
+import SectionContact from '../components/SectionContact';
+import SectionAboutMe from '../components/SectionAbout';
+import SectionBlog from '../components/SectionBlog';
+
+
 import { useEffect, useState } from 'react';
 export default function Home() {
 
@@ -45,25 +52,41 @@ export default function Home() {
             </div>
           ) : opciones === 1 ? (
             <div>
-              <ThreeScene2 />
+              <ThreeScene2 componente={SectionProjects} />
+            </div>
+          ) : opciones === 2 ? (
+            <div>
+              <ThreeScene2 componente={SectionSkills} />
+            </div>
+          ) : opciones === 3 ? (
+            <div>
+              <ThreeScene2 componente={SectionAboutMe} />
+            </div>
+          ) : opciones === 4 ? (
+            <div>
+              <ThreeScene2 componente={SectionBlog} />
+            </div>
+          ) : opciones === 5 ? (
+            <div>
+              <ThreeScene2 componente={SectionContact} />
             </div>
           ) : (
             <p>No option selected</p>
           )}
           <ThreeScene />
         </div>
-        <div className={` ${opciones !==0 ? 'boxOptionesUp': 'boxOptions'}`}>
-        <a onClick={() => { handleClickOpciones(0) }}>Inicio</a>
-        <a onClick={() => { handleClickOpciones(1) }}>Proyectos</a>
-        <a onClick={() => { handleClickOpciones(2) }}>Skills</a>
-        <a onClick={() => { handleClickOpciones(3) }}>About Me</a>
-        <a onClick={() => { handleClickOpciones(4) }}>Blog</a>
-        <a onClick={() => { handleClickOpciones(5) }}>Contacto</a>
+        <div className={` ${opciones !== 0 ? 'boxOptionesUp' : 'boxOptions'}`}>
+          <a className={opciones === 0 ? 'selectedOption' : ''} onClick={() => { handleClickOpciones(0) }}>Inicio</a>
+          <a className={opciones === 1 ? 'selectedOption' : ''} onClick={() => { handleClickOpciones(1) }}>Proyectos</a>
+          <a className={opciones === 2 ? 'selectedOption' : ''} onClick={() => { handleClickOpciones(2) }}>Skills</a>
+          <a className={opciones === 3 ? 'selectedOption' : ''} onClick={() => { handleClickOpciones(3) }}>About Me</a>
+          <a className={opciones === 4 ? 'selectedOption' : ''} onClick={() => { handleClickOpciones(4) }}>Blog</a>
+          <a className={opciones === 5 ? 'selectedOption' : ''} onClick={() => { handleClickOpciones(5) }}>Contacto</a>
+
+        </div>
 
       </div>
 
-      </div>
-     
 
 
       <main className={styles.main}>
