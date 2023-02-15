@@ -1,18 +1,27 @@
-import { useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
+import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import { TextureLoader } from 'three';
+
+
+
 
 const ThreeScene = () => {
   const containerRef = useRef();
 
+  const [numAnimacion, setnumAnimacion] = useState(0);
+
   useEffect(() => {
     // Crea la escena de three.js
     const scene = new THREE.Scene();
+
     // Crea la geometría de puntos y el material de los puntos
     const pointsGeometry = new THREE.SphereGeometry(0.05, 32, 32);
     const pointsMaterial = new THREE.PointsMaterial({
       size: 0.02,
       color: 0xffffff
     });
+    const clock = new THREE.Clock();
 
     // Crea una matriz de posiciones para los puntos
     const pointsPositions = new Float32Array(1000 * 3);
@@ -28,26 +37,11 @@ const ThreeScene = () => {
     // Crea una instancia de Points utilizando la geometría y el material creados
     const points = new THREE.Points(pointsGeometry, pointsMaterial);
 
+
+    points.renderOrder = 2; // Reemplaza "objeto" con el nombre de tu objeto
+    points.depthTest = true; // Reemplaza "objeto" con el nombre de tu objeto
     // Agrega la instancia de Points a la escena
     scene.add(points);
-
-    // Crea la geometría y el material de la esfera
-
-    const geometry = new THREE.SphereGeometry(2, 32, 32, 0, Math.PI * 2, 0, Math.PI * 2);
-    const material = new THREE.MeshBasicMaterial();
-
-
-    // Crea la esfera  la agrega a la escena
-    const sphere = new THREE.Mesh(geometry, material);
-    scene.add(sphere);
-
-    //Se añade la textura a la esfera
-    const loader = new THREE.TextureLoader()
-    loader.load('./9.jpg', (texture) => {
-      material.map = texture
-      material.needsUpdate = true;
-      animate()
-    })
 
     //Añade la textura a el background
     const loaderBackEscene = new THREE.TextureLoader()
@@ -55,14 +49,50 @@ const ThreeScene = () => {
       scene.background = texture
     })
 
+    let modelo;
+    let animations;
+    let mixers;
+    let counter = 0;
+    let positionAstronaut;
+    const loaders = new GLTFLoader();
+    loaders.load('./sin_nombre.gltf', (gltf) => {
+      modelo = gltf.scene.children[0];
+
+      // Obtiene la animación desde el modelo
+      const animation = gltf.animations[numAnimacion];
+      animations = gltf.animations;
+      // Crea un mixer de animaciones y agrega la animación
+      const mixer = new THREE.AnimationMixer(gltf.scene);
+      mixers = mixer;
+      const action = mixer.clipAction(animation);
+      action.play();
+
+      // Actualiza el mixer en cada cuadro
+      function animates() {
+        requestAnimationFrame(animates);
+        mixer.update(clock.getDelta());
+        renderer.render(scene, camera);
+      }
+      animates();
+
+      scene.add(gltf.scene);
+
+      gltf.scene.renderOrder = 9; // Reemplaza "objeto" con el nombre de tu objeto
+      gltf.scene.depthTest = false; // Reemplaza "objeto" con el nombre de tu objeto
+      gltf.scene.scale.set(2.5, 2.5, 2.5)
+      gltf.scene.position.set(0, -6, 0)
+
+      gltf.scene.name = 'Modelo';
+      positionAstronaut = gltf.scene.position;
+    });
+
+    //lightss
+    const ligth1 = new THREE.DirectionalLight(0xffffff, 1)
+    ligth1.position.set(6, 6, 6)
+    scene.add(ligth1)
     // Crea una cámara y establece su posición
-    const camera = new THREE.PerspectiveCamera(
-      75,
-      window.innerWidth / window.innerHeight,
-      0.1,
-      1000
-    );
-    camera.position.z = 5;
+    const camera = new THREE.PerspectiveCamera(95, window.innerWidth / window.innerHeight, 0.1, 1000);
+    camera.position.z = 6;
 
     // Crea un renderer y establece su tamaño
     const renderer = new THREE.WebGLRenderer();
@@ -86,43 +116,131 @@ const ThreeScene = () => {
       const x = event.clientX / window.innerWidth * 2 - 1;
       const y = event.clientY / window.innerHeight * 2 - 1;
       const lerpFactor = 0.05; // Factor de interpolación
-      sphere.position.x += (x - sphere.position.x) * lerpFactor;
-      sphere.position.y += (y - sphere.position.y) * lerpFactor;
-      points.position.x += (x - sphere.position.x) * lerpFactor;
-      points.position.y += (y - sphere.position.y) * lerpFactor;
+      points.position.x += (x - points.position.x) * lerpFactor;
+      points.position.y += (y - points.position.y) * lerpFactor;
     });
+
+
+
     const animate = () => {
       requestAnimationFrame(animate);
-      // Se Rota la esfera
-      sphere.rotation.y += 0.005;
       // Marca el atributo de posición como necesitando actualización
       points.geometry.attributes.position.needsUpdate = true;
-
-      //NECESARIO PARA UN MOVIMIENTO SUAVE AL MANTENER EL CLICK
-      // Calcular la diferencia entre el tamaño actual y el tamaño deseado
-      let scaleDiff = targetScale - currentScale;
-      // Aplicar una pequeña porción de esta diferencia en cada frame
-      currentScale += scaleDiff * 0.05;
-      sphere.scale.set(currentScale, currentScale, currentScale);
       renderer.render(scene, camera);
     };
 
-    //NECESARIO PARA HACER MAS GRANDE LA ESPERA AL MANTENER PRESIONADO EL CLICK
-    let targetScale = 1;
-    let currentScale = 1;
+    //comentario  de la funcion de zoom
+    function zoomCameraSmoothly(camera, zoomLevel) {
+      const initialZoom = camera.zoom;
+      const delta = 0.0005;
+      const zoomSteps = (zoomLevel - initialZoom) / delta;
+      let stepCount = 0;
+
+      function animateZoom() {
+        if (stepCount >= zoomSteps) {
+          return;
+        }
+        requestAnimationFrame(animateZoom);
+        camera.zoom -= delta;
+        camera.updateProjectionMatrix();
+        stepCount++;
+      }
+
+      animateZoom();
+    }
+
+
+    setTimeout(() => {
+      zoomCameraSmoothly(camera, 1.3)
+    }, 3000); // esperar 5 segundos antes de ejecutar la función de zoom
+
+    // posición inicial de la cámara
+    const initialPosition = new THREE.Vector3(0, 0, 5);
+    // posición final de la cámara
+    const finalPosition = new THREE.Vector3(0, 0, -5);
 
     window.addEventListener('mousedown', (event) => {
-      // Aumenta el tamaño de la geometría de la esfera
-      targetScale = 1.2;
-      sphere.geometry.scale(1.1, 1.1, 1.1);
+      counter++;
+      if (counter === 4) {
+        counter = 0;
+      }
+      // función para acercar la cámara con transición suave
+      function acercarCamara(duration, deltaFov) {
+        const currentFov = camera.fov;
+        const targetFov = currentFov - deltaFov;
+        const fovChange = targetFov - currentFov;
+        const startPosition = camera.position.clone();
+        const startTime = performance.now();
+
+        function update() {
+          const elapsedTime = performance.now() - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const fov = currentFov + progress * fovChange;
+          const position = new THREE.Vector3().lerpVectors(startPosition, finalPosition, progress);
+          camera.position.copy(position);
+          camera.fov = fov;
+          camera.updateProjectionMatrix();
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+        requestAnimationFrame(update);
+      }
+      setTimeout(() => {
+        acercarCamara(1500, 75);
+      }, 10);
     });
 
     window.addEventListener('mouseup', (event) => {
-      // Reduzca el tamaño de la geometría de la esfera
-      targetScale = 1;
-      sphere.geometry.scale(1 / 1.1, 1 / 1.1, 1 / 1.1);
+
+      // función para alejar la cámara con transición suave
+      function alejarCamara(duration, deltaFov) {
+        console.log(counter)
+        positionAstronaut.set(0, -3, 0)
+        console.log(positionAstronaut)
+
+        if (counter != 0) {
+          const pastAnimation = animations[counter - 1]; // buscamos la nueva animación en el archivo GLTF cargado
+          const pastAction = mixers.clipAction(pastAnimation);
+          pastAction.stop(); // detenemos la animación anterior
+        }else{
+          positionAstronaut.set(0, -6, 0)
+          const pastAnimation = animations[3]; // buscamos la nueva animación en el archivo GLTF cargado
+          const pastAction = mixers.clipAction(pastAnimation);
+          pastAction.stop(); // detenemos la animación anterior
+        }
+        const newAnimation = animations[counter]; // buscamos la nueva animación en el archivo GLTF cargado
+        const action = mixers.clipAction(newAnimation); // actualizamos la acción de animación con la nueva animación
+        action.play(); // comenzamos a reproducir la nueva animación
+
+        const currentFov = camera.fov;
+        const targetFov = currentFov + deltaFov;
+        const fovChange = targetFov - currentFov;
+        const startPosition = camera.position.clone();
+        const startTime = performance.now();
+        function update() {
+          const elapsedTime = performance.now() - startTime;
+          const progress = Math.min(elapsedTime / duration, 1);
+          const fov = currentFov + progress * fovChange;
+          const position = new THREE.Vector3().lerpVectors(startPosition, initialPosition, progress);
+          camera.position.copy(position);
+          camera.fov = fov;
+          camera.updateProjectionMatrix();
+
+          if (progress < 1) {
+            requestAnimationFrame(update);
+          }
+        }
+        requestAnimationFrame(update);
+      }
+      setTimeout(() => {
+        alejarCamara(1500, 75);
+      }, 2500);
+      //
     });
   }, []); // Solo se ejecuta una vez al montar el componente
+
 
   return <div style={{ height: "100vh" }} ref={containerRef} />
 }
