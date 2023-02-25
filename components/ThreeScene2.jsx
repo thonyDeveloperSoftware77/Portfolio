@@ -44,7 +44,7 @@ const ThreeScene2 = (props) => {
 
     //Se añade la textura a la esfera
     const loader = new THREE.TextureLoader()
-    loader.load('./lox.png', (texture) => {
+    loader.load('./planet.jpg', (texture) => {
       material.map = texture
       material.needsUpdate = true;
       animate()

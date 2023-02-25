@@ -1,8 +1,9 @@
 import { useState, useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
+import {GLTFLoader} from 'three/examples/jsm/loaders/GLTFLoader';
 import { TextureLoader } from 'three';
 
+import { DRACOLoader } from 'three/examples/jsm/loaders/DRACOLoader'
 
 
 
@@ -54,12 +55,27 @@ const ThreeScene = () => {
     let mixers;
     let counter = 0;
     let positionAstronaut;
+
+    const dracoLoader = new DRACOLoader();
+    dracoLoader.setDecoderPath('./draco/gltf/'); // use a full url path
+
+
+    //env map
+
+    const cubeTextureLoader = new THREE.CubeTextureLoader();
+
+
     const loaders = new GLTFLoader();
-    loaders.load('./sin_nombre.gltf', (gltf) => {
+
+
+
+    loaders.setDRACOLoader(dracoLoader);
+    loaders.load('./models/Astronaut1/scene.gltf', (gltf) => {
+
       modelo = gltf.scene.children[0];
 
       // Obtiene la animación desde el modelo
-      const animation = gltf.animations[numAnimacion];
+      const animation = gltf.animations[0];
       animations = gltf.animations;
       // Crea un mixer de animaciones y agrega la animación
       const mixer = new THREE.AnimationMixer(gltf.scene);
@@ -71,24 +87,27 @@ const ThreeScene = () => {
       function animates() {
         requestAnimationFrame(animates);
         mixer.update(clock.getDelta());
+        
         renderer.render(scene, camera);
       }
       animates();
 
-      scene.add(gltf.scene);
 
       gltf.scene.renderOrder = 9; // Reemplaza "objeto" con el nombre de tu objeto
       gltf.scene.depthTest = false; // Reemplaza "objeto" con el nombre de tu objeto
       gltf.scene.scale.set(2.5, 2.5, 2.5)
       gltf.scene.position.set(0, -6, 0)
+      scene.add(gltf.scene);
 
       gltf.scene.name = 'Modelo';
       positionAstronaut = gltf.scene.position;
     });
 
+
+
     //lightss
     const ligth1 = new THREE.DirectionalLight(0xffffff, 1)
-    ligth1.position.set(6, 6, 6)
+    ligth1.position.set(5, 100, 80)
     scene.add(ligth1)
     // Crea una cámara y establece su posición
     const camera = new THREE.PerspectiveCamera(95, window.innerWidth / window.innerHeight, 0.1, 1000);
@@ -204,7 +223,7 @@ const ThreeScene = () => {
           const pastAnimation = animations[counter - 1]; // buscamos la nueva animación en el archivo GLTF cargado
           const pastAction = mixers.clipAction(pastAnimation);
           pastAction.stop(); // detenemos la animación anterior
-        }else{
+        } else {
           positionAstronaut.set(0, -6, 0)
           const pastAnimation = animations[3]; // buscamos la nueva animación en el archivo GLTF cargado
           const pastAction = mixers.clipAction(pastAnimation);

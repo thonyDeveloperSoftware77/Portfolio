@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Tilt+Prism&display=swap');
 html,
 body {
   padding: 0;
@@ -7,6 +8,45 @@ body {
   overflow: hidden;
 }
 
+
+.titleSection {
+  color: white;
+  font-size: 10em;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: fixed;
+  top: 29%;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  font-family: 'Tilt Prism', cursive;
+  text-shadow: 0 0 10px white;
+
+}
+
+.subtitleSection {
+  color: rgb(64, 119, 196);
+  text-shadow: 0 0 10px rgb(34, 55, 192);
+  font-size: 2em;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  position: fixed;
+  top: 55%;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  font-family: 'Montserrat', sans-serif;
+
+}
+h1{
+  
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
 .boxSectionResponsive {
   display: flex;
   flex-direction: row;
@@ -52,6 +92,20 @@ a {
 }
 
 
+
+.contenedorForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gridSkills {
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+}
+
 .boxOptionesUp {
   z-index: 1;
   position: fixed;
@@ -74,12 +128,12 @@ a {
 .contenedorSecciones {
   background: black;
   margin-top: 10px;
-  width: 90%;
+  width: 95%;
   height: 600px;
   overflow: scroll;
   overflow-x: hidden;
   display: flex;
-  flex-direction: column ;
+  flex-direction: column;
   opacity: 0.8;
 }
 
@@ -95,7 +149,18 @@ a {
   justify-content: space-around;
 
 }
+.boxOptions a {
+  margin-top: 20px;
+}
 
+.contactBox {
+  position: fixed;
+  top: 0;
+  left: 30%;
+  right: 0;
+  margin-top: 5%;
+  width: 40%;
+}
 
 .icono {
   transition: all 0.2s ease-in-out;
@@ -109,12 +174,132 @@ a {
   transform: scale(1.2);
 }
 
-.selectedOption{
-  color: rgb(62,125,174);
+.selectedOption {
+  color: rgb(62, 125, 174);
   font-weight: 500;
   font-size: 20px;
+  text-shadow: 0 0 10px rgb(161, 161, 161);
 }
 
+
+
+.contenedorSeccionesAbout {
+  background: black;
+  margin-top: 50px;
+  width: 95%;
+  overflow: hidden;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  opacity: 0.8;
+
+}
+
+/*PARA BOTON*/
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color:rgb(64, 119, 196);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn:hover:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background-color:  rgb(13, 14, 22);
+  animation: wave 0.7s linear;
+}
+
+.btn:active:before {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.btn:active {
+  background-color: rgb(13, 14, 22);
+  box-shadow: none;
+}
+
+@keyframes wave {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    width: 400px;
+    height: 400px;
+    opacity: 0;
+  }
+}
+/*STYLES FOR GRID CONTAINER (FRAMEWORKS SECTION)*/
+
+.gridSection {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gridContainer {
+  width: 90%;
+  display: grid;
+  gap: 2rem;
+  grid-auto-rows: 8rem;
+  grid-template-columns: repeat(auto-fill, minmax(14rem, 1fr));
+}
+
+.gridContainer a {
+  background-color: rgb(72, 67, 67);
+  text-align: center;
+  align-content: center;
+}
+
+
+.gridContainer a:hover {
+  transition-duration: 0.5s;
+  transform: scale(1.1);
+}
+
+
+
+
+.gridContainer a:nth-child(2) {
+  grid-column: 3;
+  grid-row: 2 / 4;
+}
+
+.gridContainer a:nth-child(5) {
+  grid-column: 1 / 3;
+  grid-row: 1 / 3;
+}
+
+
+
+.gridContainerSection2 {
+  margin-left: 120px;
+  text-align: left;
+  margin-top: 5%;
+  width: 85%;
+  display: grid;
+  gap: 1rem;
+  grid-auto-rows: 15rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+
+.sectionAbout {
+  width: 50%;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
@@ -132,9 +317,83 @@ a {
   margin-left: 30px;
 }
 
+
 .videoBox2 {
   width: 650px;
   margin-right: 30px;
+}
+
+.sectionSkills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+section {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+}
+
+section img {
+  width: 0px;
+  flex-grow: 1;
+  object-fit: cover;
+  opacity: .8;
+  transition: .5s ease;
+}
+
+
+section img:hover {
+  width: 20px;
+  opacity: 1;
+  transition: .5s ease;
+  filter: contrast(120%);
+}
+
+
+
+.containerSection {
+  height: 500px;
+}
+
+.descriptionSkills {
+  width: 50%;
+  height: 150px;
+}
+
+@media (max-width: 1434px) {
+  .subtitleSection {
+    top: 50%;
+    font-size: 1.6em;
+  }
+}
+
+@media (max-width: 860px) {
+  .titleSection {
+    font-size: 7em;
+  }
+
+  .subtitleSection {
+    font-size: 1.1em;
+    top: 44%;
+  }
+}
+
+@media (max-width: 600px) {
+  .titleSection {
+    font-size: 4.5em;
+    top: 35%;
+    font-weight: 500;
+  }
+
+  .subtitleSection {
+    font-size: 1.2em;
+    top: 65%;
+  }
 }
 
 @media (max-width: 800px) {
@@ -143,26 +402,41 @@ a {
     flex-direction: column;
   }
 
+
+  .contactBox {
+
+    margin-top: 38%;
+    width: 80%;
+    left: 8%;
+  }
+
   .boxSectionResponsive2 {
     display: flex;
     flex-direction: column;
   }
 
+  .sectionAbout {
+    width: 90%;
+  }
 
 
   .contenedorSecciones {
     background: black;
     margin-top: 10px;
     width: 97%;
-    overflow: scroll;
-    overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
+
     opacity: 0.7;
 
   }
 
- 
+
+
+  .contenedorSeccionesAbout {
+    overflow: scroll;
+
+  }
+
+
   .contenedorSecciones img {
     height: 50px;
   }
@@ -171,8 +445,71 @@ a {
     width: 80%;
     margin-left: 0px;
   }
+
   .videoBox2 {
     width: 80%;
     margin-right: 0px;
   }
+
+
+  .gridContainer a:nth-child(2) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .gridContainer a:nth-child(5) {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  section {
+    width: 80%;
+  }
+
+
+  .gridContainerSection2 {
+    margin-left: 10px;
+    text-align: left;
+    margin-top: 5%;
+    width: 85%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 15rem;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  }
+
+  .gridContainer {
+    width: 90%;
+    display: grid;
+    gap: 1rem;
+    grid-auto-rows: 6rem;
+    grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+  }
+
+  .descriptionSkills {
+    width: 80%;
+    height: 150px;
+  }
+
+
+  .boxOptionesUp {
+    z-index: 1;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    height: 10%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    text-align: center;
+
+  }
+
+  .boxOptionesUp a {
+    margin-top: 14px;
+    margin-right: 3%;
+  }
+
+
 }
