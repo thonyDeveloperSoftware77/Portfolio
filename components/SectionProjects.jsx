@@ -5,10 +5,10 @@ const SectionProjects = () => {
     return (
         <>
             <h1 style={{ marginTop: "100px" }}>
-            <Fade top cascade>
-                PROYECTOS
-            </Fade>
-            
+                <Fade top cascade>
+                    PROYECTOS
+                </Fade>
+
             </h1>
 
             <div className="contenedorSecciones">
@@ -19,7 +19,7 @@ const SectionProjects = () => {
                         <div>
 
                             <p>
-                                "Aplicación de música" que utiliza la API de Deezer para recopilar información sobre artistas y canciones, permitiendo a los usuarios buscar y reproducir música. La interfaz se asemeja a la de Spotify, y permite a los usuarios escuchar música directamente desde YouTube utilizando un reproductor integrado. La aplicación está construida con React y Axios, y permite a los usuarios descubrir y escuchar música de manera fácil y conveniente.
+                                &ldquo;Aplicación de música&ldquo; que utiliza la API de Deezer para recopilar información sobre artistas y canciones, permitiendo a los usuarios buscar y reproducir música. La interfaz se asemeja a la de Spotify, y permite a los usuarios escuchar música directamente desde YouTube utilizando un reproductor integrado. La aplicación está construida con React y Axios, y permite a los usuarios descubrir y escuchar música de manera fácil y conveniente.
                             </p>
                             <h2>Tecnologías utilizadas</h2>
 
@@ -360,7 +360,7 @@ const SectionProjects = () => {
                         <div style={{ marginRight: "20px" }}>
 
                             <p>
-                                La Aplicación de Donaciones "Donations Inc." es una plataforma diseñada con programación orientada a objetos para ayudar a personas de escasos recursos a través de un sistema de donaciones. La aplicación ofrece la posibilidad de registrarse como donante o donatario. Los donantes pueden ingresar información personal.Por otro lado, los donatarios pueden registrar información de su institución.
+                                La Aplicación de Donaciones &ldquo;Donations Inc.&ldquo; es una plataforma diseñada con programación orientada a objetos para ayudar a personas de escasos recursos a través de un sistema de donaciones. La aplicación ofrece la posibilidad de registrarse como donante o donatario. Los donantes pueden ingresar información personal.Por otro lado, los donatarios pueden registrar información de su institución.
                                 <br />
                                 <br />
 
@@ -441,52 +441,52 @@ const SectionProjects = () => {
 
                 {/*APLICACION DE REALIDAD AUMENTADA*/}
                 <Fade top>
-                <center style={{ marginTop: "100px" }}><h1>Aplicación de realidad aumentada</h1></center>
-                <div className="boxSectionResponsive">
-                    <div style={{
-                        display: "flex",
-                        justifyContent: "center"
-                    }}
-                    >
-                        <video autoPlay="true" loop muted s className="videoBox2">
-                            <source src="/Videos/ReA.mp4" loop type="video/mp4" />
-                        </video>
-                    </div>
-                    <div>
-                        <p>
-                            Se logró crear una aplicación de realidad aumentada, que al interactuar  con la cámara del dispositivo se reconoce el plano y muestra los personajes junto con sus respectivas animaciones.
-                            <br />
-                            <br />
-                            La metodología que se utilizó para desarrollar este proyecto fue de tipo investigativo, se hizo la respectiva indagación del uso de cada una de las herramientas orientado a las necesidades del proyecto tanto de vuforia, mixamo como también unity, mediante la documentación oficial que estas proporcionan, como también con herramientas de aprendizaje como youtube y creatividad.
-                        </p>
-                        <h2>Tecnologías utilizadas</h2>
+                    <center style={{ marginTop: "100px" }}><h1>Aplicación de realidad aumentada</h1></center>
+                    <div className="boxSectionResponsive">
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center"
+                        }}
+                        >
+                            <video autoPlay="true" loop muted s className="videoBox2">
+                                <source src="/Videos/ReA.mp4" loop type="video/mp4" />
+                            </video>
+                        </div>
+                        <div>
+                            <p>
+                                Se logró crear una aplicación de realidad aumentada, que al interactuar  con la cámara del dispositivo se reconoce el plano y muestra los personajes junto con sus respectivas animaciones.
+                                <br />
+                                <br />
+                                La metodología que se utilizó para desarrollar este proyecto fue de tipo investigativo, se hizo la respectiva indagación del uso de cada una de las herramientas orientado a las necesidades del proyecto tanto de vuforia, mixamo como también unity, mediante la documentación oficial que estas proporcionan, como también con herramientas de aprendizaje como youtube y creatividad.
+                            </p>
+                            <h2>Tecnologías utilizadas</h2>
 
-                        <div style={{ display: "flex", flexDirection: "column" }}>
+                            <div style={{ display: "flex", flexDirection: "column" }}>
 
 
-                            <div className="boxSectionResponsive2">
+                                <div className="boxSectionResponsive2">
 
-                                <div>
-                                    <h3>Herramientas:</h3>
-                                    <div style={{ display: "flex" }}>
-                                        <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
-                                            <img src="./Icons/unity.png" alt="" />
-                                        </div>
-                                        <div style={{ flexDirection: "row", marginRight: "30px" }} className="icono">
-                                            <img src="./Icons/vuforia.png" alt="" />
-                                        </div>
-                                        <div style={{ flexDirection: "row" }} className="icono">
-                                            <img src="./Icons/mixamo.png" alt="" />
+                                    <div>
+                                        <h3>Herramientas:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/unity.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", marginRight: "30px" }} className="icono">
+                                                <img src="./Icons/vuforia.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row" }} className="icono">
+                                                <img src="./Icons/mixamo.png" alt="" />
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
 
+                                </div>
                             </div>
                         </div>
+
+
                     </div>
-
-
-                </div>
                 </Fade>
             </div>
         </>
