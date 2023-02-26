@@ -397,7 +397,7 @@ const SectionProjects = () => {
                                         <h3>Librerías:</h3>
                                         <div style={{ display: "flex" }}>
                                             <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
-                                                <img src="./Icons/JQuery.png" alt="" />
+                                                <img src="./Icons/jQuery.png" alt="" />
                                             </div>
 
                                         </div>
