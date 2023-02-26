@@ -9,7 +9,7 @@ const BackgroundGalaxy = (props) => {
     const pointLightRef2 = useRef();
 
 
-    const { nodes, materials } = useGLTF("./backGroundGalaxy.glb");
+    const { nodes, materials } = useGLTF("./backgroundGalaxy.glb");
 
     const handlePointerMove = (event) => {
 
@@ -46,7 +46,7 @@ const BackgroundGalaxy = (props) => {
     );
 };
 
-useGLTF.preload("./backGroundGalaxy.glb");
+useGLTF.preload("./backgroundGalaxy.glb");
 
 
 
