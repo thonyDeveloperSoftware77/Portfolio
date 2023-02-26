@@ -105,7 +105,7 @@ const SectionProjects = () => {
                         }}
                         >
                             <video autoPlay="true" loop muted s className="videoBox2">
-                                <source src="/Videos/proyectoDiscretas.mp4" loop type="video/mp4" />
+                                <source src="/Videos/lol.mp4" loop type="video/mp4" />
                             </video>
                         </div>
                         <div>
