@@ -105,7 +105,7 @@ const SectionProjects = () => {
                         }}
                         >
                             <video autoPlay="true" loop muted s className="videoBox2">
-                                <source src="/Videos/lol.mp4" loop type="video/mp4" />
+                                <source src="/Videos/discrete.mp4" loop type="video/mp4" />
                             </video>
                         </div>
                         <div>
@@ -346,7 +346,7 @@ const SectionProjects = () => {
                             justifyContent: "center"
                         }}>
                             <video autoPlay="true" loop muted className="videoBox">
-                                <source src="/Videos/MatlabProyect.mp4" loop type="video/mp4" />
+                                <source src="/Videos/matla.mp4" loop type="video/mp4" />
                             </video>
                         </div>
 
@@ -432,7 +432,7 @@ const SectionProjects = () => {
                             justifyContent: "center"
                         }}>
                             <video autoPlay="true" loop muted className="videoBox">
-                                <source src="/Videos/DonaCIONES1.mp4" loop type="video/mp4" />
+                                <source src="/Videos/donaci.mp4" loop type="video/mp4" />
                             </video>
                         </div>
 
@@ -449,7 +449,7 @@ const SectionProjects = () => {
                         }}
                         >
                             <video autoPlay="true" loop muted s className="videoBox2">
-                                <source src="/Videos/ReA.mp4" loop type="video/mp4" />
+                                <source src="/Videos/realidad.mp4" loop type="video/mp4" />
                             </video>
                         </div>
                         <div>
