@@ -77,46 +77,46 @@ const SectionProjects = () => {
                             <h2>Experiencia en Frameworks y librerías</h2>
                             <div className='gridContainer'>
 
-                                <a href='https://scrollrevealjs.org/' target="_blank" >
+                                <a href='https://scrollrevealjs.org/' target="_blank"   rel="noreferrer">
                                     <Image src={imgSkills.scrollReveal} layout="responsive" width="100%" alt="" />
                                 </a>
-                                <a href='https://reactjs.org/' target="_blank">
+                                <a href='https://reactjs.org/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.React} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://scrollrevealjs.org/' target="_blank">
+                                <a href='https://scrollrevealjs.org/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.bootstrap} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://getbootstrap.com/' target="_blank">
+                                <a href='https://getbootstrap.com/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.animateCss} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href=' https://nextjs.org/' target="_blank">
+                                <a href=' https://nextjs.org/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.nextJs} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://axios-http.com/' target="_blank">
+                                <a href='https://axios-http.com/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.axios} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://graphql.org/' target="_blank">
+                                <a href='https://graphql.org/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.graphQl} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://threejs.org/' target="_blank">
+                                <a href='https://threejs.org/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.threeJs} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://docs.pmnd.rs/react-three-fiber/getting-started/introduction' target="_blank">
+                                <a href='https://docs.pmnd.rs/react-three-fiber/getting-started/introduction' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.threeFiber} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://github.com/pmndrs/drei' target="_blank">
+                                <a href='https://github.com/pmndrs/drei' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.threeDrei} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://www.npmjs.com/package/react-force-graph' target="_blank">
+                                <a href='https://www.npmjs.com/package/react-force-graph' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.forceGraph} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://apexcharts.com/' target="_blank">
+                                <a href='https://apexcharts.com/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.apexCharts} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://www.npmjs.com/package/gltf-pipeline' target="_blank">
+                                <a href='https://www.npmjs.com/package/gltf-pipeline' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.pipeline} layout="responsive" width="100%" alt=""></Image>
                                 </a>
-                                <a href='https://jquery.com/' target="_blank">
+                                <a href='https://jquery.com/' target="_blank"  rel="noreferrer">
                                     <Image src={imgSkills.jQery} layout="responsive" width="100%" alt=""></Image>
                                 </a>
                             </div>
