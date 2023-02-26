@@ -13,7 +13,7 @@ import scrollRevealImg from '../img/scrollReveal.jpg';
 import threeDreiImg from '../img/threeDrei.jpg';
 import threeFiberImg from '../img/threeFiber.jpg';
 import threeJsImg from '../img/threeJs.jpg';
-import jQeryImg from '../img/jQueryImg.png';
+import jQueryImg from '../img/jQueryImg.png';
 
 const imgSkills = {
     animateCss: animateCssImg,
@@ -31,6 +31,6 @@ const imgSkills = {
     threeDrei: threeDreiImg,
     threeFiber: threeFiberImg,
     threeJs: threeJsImg,
-    jQery: jQeryImg,
+    jQery: jQueryImg,
 };
 export default imgSkills;
