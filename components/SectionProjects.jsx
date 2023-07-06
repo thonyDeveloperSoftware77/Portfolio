@@ -86,7 +86,7 @@ const SectionProjects = () => {
                             </p>
 
                             <strong>
-                                <a href="https://web-auditoria-neon.vercel.app/" target="_blank" >Ir al proyecto</a>
+                                <a href="https://web-auditoria-neon.vercel.app/" target="_blank" rel="noreferrer" >Ir al proyecto</a>
 
                             </strong>
                             <h2>Tecnologías utilizadas</h2>
