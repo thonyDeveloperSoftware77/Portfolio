@@ -82,7 +82,7 @@ const SectionProjects = () => {
                         </div>
                         <div>
                             <p>
-                                Desarrollo de un sistema de control interno diseñado específicamente para realizar auditorías internas. El objetivo principal fue proporcionarte una herramienta eficiente para evaluar el estado de madurez de tu sistema de control interno. Para lograrlo, se creó un "Modelo de madurez del sistema de control interno institucional" que te permitirá identificar el nivel de desarrollo de cada uno de los componentes funcionales en instituciones, un Modelo de control interno y un Mapa de riesgos de las instituciones.
+                                Desarrollo de un sistema de control interno diseñado específicamente para realizar auditorías internas. El objetivo principal fue proporcionarte una herramienta eficiente para evaluar el estado de madurez de tu sistema de control interno. Para lograrlo, se creó un Modelo de madurez del sistema de control interno institucional que te permitirá identificar el nivel de desarrollo de cada uno de los componentes funcionales en instituciones, un Modelo de control interno y un Mapa de riesgos de las instituciones.
                             </p>
 
                             <strong>
