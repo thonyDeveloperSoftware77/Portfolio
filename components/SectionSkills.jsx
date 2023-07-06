@@ -160,6 +160,23 @@ const SectionProjects = () => {
                                     <li>Kali linux</li>
                                 </ul>
                             </div>
+                            <div>
+                                <h2>API</h2>
+                                <ul>
+                                    <li>Creación de APIS con node.js, express, sequelize y typescript</li>
+                                    <li>Middlewares</li>
+                                    <li>Tokes</li>
+                                    <li>Autenticación con google</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h2>Despliegues</h2>
+                                <ul>
+                                    <li>Migración de base de datos Sql Server a Azure</li>
+                                    <li>Levantar apis de express y node en hop</li>
+                                    <li>Subir páginas web con vercel</li>
+                                </ul>
+                            </div>
                         </div>
 
 

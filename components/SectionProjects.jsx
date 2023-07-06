@@ -11,7 +11,171 @@ const SectionProjects = () => {
 
             </h1>
 
+
             <div className="contenedorSecciones">
+                {/*Análisis Geográfico del Índice de Crimen en la Ciudad de Quito*/}
+                <Fade right>
+                    <center style={{ marginTop: "100px" }}>   <h1>Sistema de auditoría interna </h1></center>
+                    <div className="boxSectionResponsive">
+                        <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center"
+                        }}
+                        >
+                            <video autoPlay="true" loop muted s className="videoBox2">
+                                <source src="/Videos/Backauditoria.mp4" control="true" controls loop type="video/mp4" />
+                            </video>
+                            <div>
+                                <h3>Funciones en la empresa:</h3>
+                                <li>
+                                    <strong>
+                                        Ingeniería de requerimientos:
+                                    </strong>
+                                    Levantamiento de requisitos funcionales y no funcionales
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Bases de datos:
+                                    </strong>
+                                    Modelamiento, normalización y creación de la base de datos en Sql Server, uso de Firebase para el almacenamiento de archivos, subida y descargar de reportes.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        API:
+                                    </strong>
+                                    Creación de la API con middlewares de seguridad, tokens, autenticación con google
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Backend:
+                                    </strong>
+                                    Implementación de toda la lógica de la aplicación web de auditorías.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Frontend:
+                                    </strong>
+                                    Diseño y creación del sistema visual de la aplicación web, responsive design.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        3D:
+                                    </strong>
+                                    Creación y animación de objeto 3D.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Despliegue:
+                                    </strong>
+                                    Despliegue de la base de datos en Azure, despliegue de la API en hop y despliegue de la aplicación web en Vercel.
+                                </li>
+
+
+                            </div>
+                        </div>
+                        <div>
+                            <p>
+                                Desarrollo de un sistema de control interno diseñado específicamente para realizar auditorías internas. El objetivo principal fue proporcionarte una herramienta eficiente para evaluar el estado de madurez de tu sistema de control interno. Para lograrlo, se creó un "Modelo de madurez del sistema de control interno institucional" que te permitirá identificar el nivel de desarrollo de cada uno de los componentes funcionales en instituciones, un Modelo de control interno y un Mapa de riesgos de las instituciones.
+                            </p>
+
+                            <strong>
+                                <a href="https://web-auditoria-neon.vercel.app/" target="_blank" >Ir al proyecto</a>
+
+                            </strong>
+                            <h2>Tecnologías utilizadas</h2>
+
+                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                <div className="boxSectionResponsive2">
+                                    <div>
+                                        <h3 >Lenguajes:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "28px" }} className="icono">
+                                                <img src="./Icons/html.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/Css.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row" }} className="icono">
+                                                <img src="./Icons/Javascript.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", paddingLeft:"25px" }} className="icono">
+                                                <img src="./Icons/Typescript1.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", paddingLeft:"25px" }} className="icono">
+                                                <img src="./Icons/sql.png" alt="" />
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <h3>Librerías:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/React.png" alt="" />
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className="boxSectionResponsive2">
+
+                                    <div>
+                                        <h3>Herramientas:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/Figma.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", marginRight: "30px" }} className="icono">
+                                                <img src="./Icons/git.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row" }} className="icono">
+                                                <img src="./Icons/github.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+
+                                        <div style={{ display: "flex", marginTop: "35px" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/ApexCharts.png" alt="" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="boxSectionResponsive2">
+
+                                    <div>
+                                        <h3>Despliegue:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/azure.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", marginRight: "30px" }} className="icono">
+                                                <img src="./Icons/hop.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row" }} className="icono">
+                                                <img src="./Icons/vercel.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                   
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </Fade>
                 {/*STREAMIFY*/}
                 <Fade >
                     <center> <h1>Streamify</h1></center>
@@ -37,6 +201,7 @@ const SectionProjects = () => {
                                             <div style={{}} className="icono">
                                                 <img src="./Icons/Javascript.png" alt="" />
                                             </div>
+                                            
                                         </div>
 
                                     </div>
