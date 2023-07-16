@@ -134,7 +134,7 @@ const SectionProjects = () => {
                             <div>
                                 <h2>Hacking Ético</h2>
                                 <li>Conocimiento básico de hacking ético</li>
-                                <li>Experiencia en uso de herramientas OSINT para investiagación</li>
+                                <li>Experiencia en uso de herramientas OSINT para investigación</li>
                                 <li>Laboratorio de ataques, pishing y payloads</li>
                             </div>
 

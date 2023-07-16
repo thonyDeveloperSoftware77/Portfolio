@@ -119,8 +119,8 @@ const Scene = (props) => {
 
    
       <ForceGraph3D
-        width={windowSize.width*0.92}
-        height={600}
+        width={windowSize.width*0.8}
+        height={450}
         ref={fgRef}
         graphData={data}
         nodeAutoColorBy="group"

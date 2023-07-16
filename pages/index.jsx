@@ -16,6 +16,18 @@ import Objeto3D from "../components/Objeto3D.jsx";
 
 import BackgroundGalaxy from "../components/BackgroundGalaxy.jsx";
 import { useEffect, useState } from 'react';
+
+import { Html } from '@react-three/drei'
+import Loader from '../components/Loader';
+function Loading() {
+  return (
+    <Html>
+      <Loader />
+    </Html>
+  )
+}
+
+
 export default function Home() {
 
 
@@ -61,7 +73,7 @@ export default function Home() {
 
       <div className={`overlay ${!isLoading ? 'overlay-hidden' : ''}`}>
         <nav style={{ position: "fixed", zIndex: "1" }}>
-         
+
         </nav>
 
 
@@ -70,7 +82,7 @@ export default function Home() {
             <>
               <div style={{ width: "100%", height: "100vh" }}>
                 <Canvas onClick={(e) => hadleClickOpcionesAnimacion(e)}>
-                  <Suspense fallback={null}>
+                  <Suspense fallback={<Loading />}>
                     <color attach="background" args={['#15151a']} />
                     <Objeto3D animation={opcionAnimacion} />
                     <BackgroundGalaxy />

@@ -14,7 +14,7 @@ import threeDreiImg from '../img/threeDrei.jpg';
 import threeFiberImg from '../img/threeFiber.jpg';
 import threeJsImg from '../img/threeJs.jpg';
 import jQueryImg from '../img/jQueryImg.png';
-
+import programming from '../../../public/programming.png'
 const imgSkills = {
     animateCss: animateCssImg,
     apexCharts: apexChartsImg,
@@ -32,5 +32,6 @@ const imgSkills = {
     threeFiber: threeFiberImg,
     threeJs: threeJsImg,
     jQery: jQueryImg,
+    programming: programming,
 };
 export default imgSkills;

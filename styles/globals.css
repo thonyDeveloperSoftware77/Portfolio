@@ -23,8 +23,11 @@ body {
   z-index: 3;
   font-family: 'Tilt Prism', cursive;
   text-shadow: 0 0 10px white;
+  pointer-events: none;
 
 }
+
+
 
 .subtitleSection {
   color: rgb(64, 119, 196);
@@ -40,6 +43,7 @@ body {
   left: 0;
   z-index: 3;
   font-family: 'Montserrat', sans-serif;
+  pointer-events: none;
 
 }
 h1{
@@ -184,14 +188,16 @@ a {
 
 
 .contenedorSeccionesAbout {
+  padding: 10px;
   background: black;
   margin-top: 50px;
-  width: 95%;
+  width: 98%;
   overflow: hidden;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   opacity: 0.8;
+  text-align: justify;
 
 }
 
@@ -298,6 +304,8 @@ a {
 
 
 .sectionAbout {
+  overflow: auto;
+  height: 80vh;
   width: 50%;
 }
 
@@ -362,8 +370,84 @@ section img:hover {
 
 .descriptionSkills {
   width: 50%;
-  height: 150px;
+  height: 210px;
 }
+
+/*ESTILOS PARA EL COMPONENTE DE LOADER*/
+.container {
+  z-index: 5;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  height: 96px;
+  width: 96px;
+  animation: rotate_3922 1.2s linear infinite;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container span {
+  position: absolute;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  background-color: #9b59b6;
+  background-image: linear-gradient(#9b59b6, #84cdfa, #5ad1cd);
+}
+
+.container span:nth-of-type(1) {
+  filter: blur(5px);
+}
+
+.container span:nth-of-type(2) {
+  filter: blur(10px);
+}
+
+.container span:nth-of-type(3) {
+  filter: blur(25px);
+}
+
+.container span:nth-of-type(4) {
+  filter: blur(50px);
+}
+
+.container::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background-color: #fff;
+  border: solid 5px #ffffff;
+  border-radius: 50%;
+}
+
+@keyframes rotate_3922 {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.loader {
+  z-index: 5;
+  background-color: darkblue;
+}
+
+.loaderBox {
+  position: fixed;
+  background-color: #020202;
+  width: 100%;
+  height: 100vh;
+  z-index: 9999;
+  top: 0;
+}
+
 
 @media (max-width: 1434px) {
   .subtitleSection {
@@ -397,6 +481,9 @@ section img:hover {
 }
 
 @media (max-width: 800px) {
+  .contenedorSeccionesAbout{
+    margin-top: 0px;
+  }
   .boxSectionResponsive {
     display: flex;
     flex-direction: column;
@@ -430,11 +517,6 @@ section img:hover {
   }
 
 
-
-  .contenedorSeccionesAbout {
-    overflow: scroll;
-
-  }
 
 
   .contenedorSecciones img {

@@ -13,7 +13,7 @@ const SectionProjects = () => {
 
 
             <div className="contenedorSecciones">
-                {/*Análisis Geográfico del Índice de Crimen en la Ciudad de Quito*/}
+                {/*Adit Safe Consulting*/}
                 <Fade right>
                     <center style={{ marginTop: "100px" }}>   <h1>Sistema de auditoría interna </h1></center>
                     <div className="boxSectionResponsive">
@@ -82,7 +82,7 @@ const SectionProjects = () => {
                         </div>
                         <div>
                             <p>
-                                Desarrollo de un sistema de control interno diseñado específicamente para realizar auditorías internas. El objetivo principal fue proporcionarte una herramienta eficiente para evaluar el estado de madurez de tu sistema de control interno. Para lograrlo, se creó un Modelo de madurez del sistema de control interno institucional que te permitirá identificar el nivel de desarrollo de cada uno de los componentes funcionales en instituciones, un Modelo de control interno y un Mapa de riesgos de las instituciones.
+                                Desarrollo de un sistema de control interno diseñado específicamente para realizar auditorías internas. El objetivo principal fue proporcionar una herramienta eficiente para evaluar el estado de madurez de tu sistema de control interno. Para lograrlo, se creó un Modelo de madurez del sistema de control interno institucional que te permitirá identificar el nivel de desarrollo de cada uno de los componentes funcionales en instituciones, un Modelo de control interno y un Mapa de riesgos de las instituciones.
                             </p>
 
                             <strong>
@@ -105,10 +105,10 @@ const SectionProjects = () => {
                                             <div style={{ flexDirection: "row" }} className="icono">
                                                 <img src="./Icons/Javascript.png" alt="" />
                                             </div>
-                                            <div style={{ flexDirection: "row", paddingLeft:"25px" }} className="icono">
+                                            <div style={{ flexDirection: "row", paddingLeft: "25px" }} className="icono">
                                                 <img src="./Icons/Typescript1.png" alt="" />
                                             </div>
-                                            <div style={{ flexDirection: "row", paddingLeft:"25px" }} className="icono">
+                                            <div style={{ flexDirection: "row", paddingLeft: "25px" }} className="icono">
                                                 <img src="./Icons/sql.png" alt="" />
                                             </div>
                                         </div>
@@ -168,7 +168,7 @@ const SectionProjects = () => {
                                             </div>
                                         </div>
                                     </div>
-                                   
+
                                 </div>
                             </div>
                         </div>
@@ -176,44 +176,115 @@ const SectionProjects = () => {
 
                     </div>
                 </Fade>
-                {/*STREAMIFY*/}
-                <Fade >
-                    <center> <h1>Streamify</h1></center>
-                    <div className="boxSectionResponsive" >
-                        <div>
+                {/*Price Pilot*/}
+                <Fade left>
+                    <center style={{ marginTop: "100px" }}>   <h1>Price Portal</h1></center>
+                    <div className="boxSectionResponsive">
+                        <div style={{
+                            display: "flex",
+                            flexDirection: "column",
+                            justifyContent: "center"
+                        }}
+                        >
+                            <video autoPlay="true" loop muted s className="videoBox2">
+                                <source src="/Videos/Pricepilot.m4v" control="true" controls loop type="video/mp4" />
+                            </video>
+                            <div>
+                                <h3>Funciones en el proyecto:</h3>
+                                <li>
+                                    <strong>
+                                        Prototipado web:
+                                    </strong>
+                                    Prototipo de la plataforma en Figma
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Bases de datos:
+                                    </strong>
+                                    Modelamiento, normalización y creación de la base de datos en Sql Server, uso de Firebase para autenticaciones seguras con google.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        API:
+                                    </strong>
+                                    Creación de la API con middlewares de seguridad, tokens, autenticación con google
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Backend:
+                                    </strong>
+                                    Implementación de toda lógica de scrappers en multiples sitios para la búsqueda de videojuegos en tiempo real.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Frontend:
+                                    </strong>
+                                    Diseño y creación del sistema visual de la aplicación web, responsive design, edición y optimización de imágenes, generación de contenido visual.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        3D:
+                                    </strong>
+                                    Creación y animación de objeto 3D.
+                                </li>
+                                <br />
+                                <li>
+                                    <strong>
+                                        Despliegue:
+                                    </strong>
+                                    Despliegue de la base de datos en Azure, despliegue de la API en hop y despliegue de la aplicación web en Vercel.
+                                </li>
 
+
+                            </div>
+                        </div>
+                        <div>
                             <p>
-                                &ldquo;Aplicación de música&ldquo; que utiliza la API de Deezer para recopilar información sobre artistas y canciones, permitiendo a los usuarios buscar y reproducir música. La interfaz se asemeja a la de Spotify, y permite a los usuarios escuchar música directamente desde YouTube utilizando un reproductor integrado. La aplicación está construida con React y Axios, y permite a los usuarios descubrir y escuchar música de manera fácil y conveniente.
+                                Desarrollo y despliegue de la plataforma PricePilot, la herramienta definitiva para encontrar los mejores precios en juegos. PricePilot una plataforma que usa scrappers en múltiples plataformas como Eneba, Steam, 2game y GamersGate y  compara los precios para encontrar las ofertas más atractivas y guardar juegos en favoritos.
                             </p>
+
+                            <strong>
+                                <a href="https://web-price-pilot.vercel.app/" target="_blank" rel="noreferrer" >Ir al proyecto</a>
+
+                            </strong>
                             <h2>Tecnologías utilizadas</h2>
 
                             <div style={{ display: "flex", flexDirection: "column" }}>
                                 <div className="boxSectionResponsive2">
                                     <div>
                                         <h3 >Lenguajes:</h3>
-                                        <div style={{ display: "flex", flexDirection: "row" }}>
-                                            <div style={{ marginRight: "28px" }} className="icono">
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "28px" }} className="icono">
                                                 <img src="./Icons/html.png" alt="" />
                                             </div>
-                                            <div style={{ marginRight: "35px" }} className="icono">
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
                                                 <img src="./Icons/Css.png" alt="" />
                                             </div>
-                                            <div style={{}} className="icono">
+                                            <div style={{ flexDirection: "row" }} className="icono">
                                                 <img src="./Icons/Javascript.png" alt="" />
                                             </div>
-                                            
+                                            <div style={{ flexDirection: "row", paddingLeft: "25px" }} className="icono">
+                                                <img src="./Icons/Typescript1.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", paddingLeft: "25px" }} className="icono">
+                                                <img src="./Icons/sql.png" alt="" />
+                                            </div>
                                         </div>
 
                                     </div>
                                     <div>
                                         <h3>Librerías:</h3>
                                         <div style={{ display: "flex" }}>
-                                            <div style={{ marginRight: "35px" }} className="icono">
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
                                                 <img src="./Icons/React.png" alt="" />
                                             </div>
-                                            <div className="icono">
-                                                <img src="./Icons/Axias.png" alt="" />
-                                            </div>
+
+
                                         </div>
                                     </div>
 
@@ -223,45 +294,54 @@ const SectionProjects = () => {
                                     <div>
                                         <h3>Herramientas:</h3>
                                         <div style={{ display: "flex" }}>
-                                            <div style={{ marginRight: "35px" }} className="icono">
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
                                                 <img src="./Icons/Figma.png" alt="" />
                                             </div>
-                                            <div style={{ marginRight: "30px" }} className="icono">
-                                                <img src="./Icons/Photoshop.png" alt="" />
+                                            <div style={{ flexDirection: "row", marginRight: "30px" }} className="icono">
+                                                <img src="./Icons/git.png" alt="" />
                                             </div>
-                                            <div className="icono">
+                                            <div style={{ flexDirection: "row" }} className="icono">
                                                 <img src="./Icons/github.png" alt="" />
                                             </div>
                                         </div>
                                     </div>
                                     <div>
-                                        <h3>Apis:</h3>
-                                        <div style={{ display: "flex" }}>
-                                            <div style={{ marginRight: "25px" }} className="icono">
-                                                <img src="./Icons/deezer.png" alt="" />
+
+                                        <div style={{ display: "flex", marginTop: "35px" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/ApexCharts.png" alt="" />
                                             </div>
-                                            <div className="icono">
-                                                <img src="./Icons/youtube.png" alt="" />
-                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
+                                <div className="boxSectionResponsive2">
+
+                                    <div>
+                                        <h3>Despliegue:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ flexDirection: "row", marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/azure.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row", marginRight: "30px" }} className="icono">
+                                                <img src="./Icons/hop.png" alt="" />
+                                            </div>
+                                            <div style={{ flexDirection: "row" }} className="icono">
+                                                <img src="./Icons/vercel.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
                         </div>
-                        <div style={{
-                            display: "flex",
-                            justifyContent: "center"
-                        }}>
-                            <video className="videoBox" autoPlay="true" loop muted >
-                                <source src="/Videos/streamify.mp4" loop type="video/mp4" />
-                            </video>
-                        </div>
+
 
                     </div>
                 </Fade>
 
-                {/*Análisis Geográfico del Índice de Crimen en la Ciudad de Quito*/}
-                <Fade right>
+                  {/*Análisis Geográfico del Índice de Crimen en la Ciudad de Quito*/}
+                  <Fade right>
                     <center style={{ marginTop: "100px" }}>   <h1>Análisis Geográfico del Índice de Crimen en la Ciudad de Quito</h1></center>
                     <div className="boxSectionResponsive">
                         <div style={{
@@ -347,6 +427,93 @@ const SectionProjects = () => {
 
                     </div>
                 </Fade>
+
+                
+                {/*STREAMIFY*/}
+                <Fade >
+                    <center> <h1>Streamify</h1></center>
+                    <div className="boxSectionResponsive" >
+                        <div>
+
+                            <p>
+                                &ldquo;Aplicación de música&ldquo; que utiliza la API de Deezer para recopilar información sobre artistas y canciones, permitiendo a los usuarios buscar y reproducir música. La interfaz se asemeja a la de Spotify, y permite a los usuarios escuchar música directamente desde YouTube utilizando un reproductor integrado. La aplicación está construida con React y Axios, y permite a los usuarios descubrir y escuchar música de manera fácil y conveniente.
+                            </p>
+                            <h2>Tecnologías utilizadas</h2>
+
+                            <div style={{ display: "flex", flexDirection: "column" }}>
+                                <div className="boxSectionResponsive2">
+                                    <div>
+                                        <h3 >Lenguajes:</h3>
+                                        <div style={{ display: "flex", flexDirection: "row" }}>
+                                            <div style={{ marginRight: "28px" }} className="icono">
+                                                <img src="./Icons/html.png" alt="" />
+                                            </div>
+                                            <div style={{ marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/Css.png" alt="" />
+                                            </div>
+                                            <div style={{}} className="icono">
+                                                <img src="./Icons/Javascript.png" alt="" />
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    <div>
+                                        <h3>Librerías:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/React.png" alt="" />
+                                            </div>
+                                            <div className="icono">
+                                                <img src="./Icons/Axias.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div className="boxSectionResponsive2">
+
+                                    <div>
+                                        <h3>Herramientas:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ marginRight: "35px" }} className="icono">
+                                                <img src="./Icons/Figma.png" alt="" />
+                                            </div>
+                                            <div style={{ marginRight: "30px" }} className="icono">
+                                                <img src="./Icons/Photoshop.png" alt="" />
+                                            </div>
+                                            <div className="icono">
+                                                <img src="./Icons/github.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <h3>Apis:</h3>
+                                        <div style={{ display: "flex" }}>
+                                            <div style={{ marginRight: "25px" }} className="icono">
+                                                <img src="./Icons/deezer.png" alt="" />
+                                            </div>
+                                            <div className="icono">
+                                                <img src="./Icons/youtube.png" alt="" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style={{
+                            display: "flex",
+                            justifyContent: "center"
+                        }}>
+                            <video className="videoBox" autoPlay="true" loop muted >
+                                <source src="/Videos/streamify.mp4" loop type="video/mp4" />
+                            </video>
+                        </div>
+
+                    </div>
+                </Fade>
+
+              
 
                 {/*Sistema de gestión de proyectos para Inmozlion S.A*/}
                 <Fade right>
