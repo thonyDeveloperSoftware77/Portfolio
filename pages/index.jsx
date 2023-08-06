@@ -1,4 +1,9 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
+
+const Objeto3D = dynamic(() => import('../components/Objeto3D.jsx'))
+
+
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import ThreeScene from '../components/ThreeScene'
@@ -12,7 +17,6 @@ import SectionBlog from '../components/SectionBlog';
 import { Canvas } from "@react-three/fiber";
 import { Environment, OrbitControls, Lightformer, ContactShadows } from "@react-three/drei";
 import { Suspense } from "react";
-import Objeto3D from "../components/Objeto3D.jsx";
 
 import BackgroundGalaxy from "../components/BackgroundGalaxy.jsx";
 import { useEffect, useState } from 'react';

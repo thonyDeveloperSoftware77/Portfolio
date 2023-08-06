@@ -3,8 +3,8 @@
 export default function Loader() {
     return (
         <div className="loaderBox">
-            <div class="loader">
-                <div class="container">
+            <div className="loader">
+                <div className="container">
                     <span></span>
                     <span></span>
                     <span></span>
