@@ -1,3 +1,4 @@
+'use client'
 import Head from 'next/head'
 import dynamic from 'next/dynamic'
 
@@ -6,23 +7,25 @@ const Objeto3D = dynamic(() => import('../components/Objeto3D.jsx'))
 
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import ThreeScene from '../components/ThreeScene'
 import ThreeScene2 from '../components/ThreeScene2';
 import SectionProjects from '../components/SectionProjects';
 import SectionSkills from '../components/SectionSkills';
 import SectionContact from '../components/SectionContact';
 import SectionAboutMe from '../components/SectionAbout';
-import SectionBlog from '../components/SectionBlog';
-
-import { Canvas } from "@react-three/fiber";
+import * as THREE from 'three'
+import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Environment, OrbitControls, Lightformer, ContactShadows } from "@react-three/drei";
 import { Suspense } from "react";
-
-import BackgroundGalaxy from "../components/BackgroundGalaxy.jsx";
 import { useEffect, useState } from 'react';
 
 import { Html } from '@react-three/drei'
 import Loader from '../components/Loader';
+import { useMemo } from 'react'
+
+
+const Textures = dynamic(() => import('../components/Textures'))
+
+
 function Loading() {
   return (
     <Html>
@@ -30,6 +33,9 @@ function Loading() {
     </Html>
   )
 }
+
+
+
 
 
 export default function Home() {
@@ -67,6 +73,7 @@ export default function Home() {
 
   }, [opciones])
 
+ 
   return (
     <>
       <Head>
@@ -81,18 +88,18 @@ export default function Home() {
         </nav>
 
 
+
         <div style={{ position: "fixed", width: "100%" }} >
           {opciones === 0 ? (
             <>
               <div style={{ width: "100%", height: "100vh" }}>
                 <Canvas onClick={(e) => hadleClickOpcionesAnimacion(e)}>
                   <Suspense fallback={<Loading />}>
-                    <color attach="background" args={['#15151a']} />
                     <Objeto3D animation={opcionAnimacion} />
-                    <BackgroundGalaxy />
 
                     <hemisphereLight intensity={0.3} color={"#0000FF"} />
 
+                    <Textures />
                     <Environment resolution={512}>
                       {/* Ceiling */}
                       <Lightformer intensity={2} rotation-x={Math.PI / 2} position={[0, 4, -9]} scale={[10, 1, 1]} />
