@@ -187,7 +187,7 @@ const SectionProjects = () => {
                         }}
                         >
                             <video autoPlay="true" loop muted s className="videoBox2">
-                                <source src="/Videos/Pricepilot.m4v" control="true" controls loop type="video/mp4" />
+                                <source src="/Videos/Pricepilot.mp4" control="true" controls loop type="video/mp4" />
                             </video>
                             <div>
                                 <h3>Funciones en el proyecto:</h3>
