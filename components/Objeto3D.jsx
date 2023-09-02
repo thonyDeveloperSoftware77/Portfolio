@@ -127,7 +127,7 @@ myMateriallol.map = texture4
   );
 }
 
-useGLTF.preload("./astronautGlb.glb");
+useGLTF.preload("./untitled2.glb");
 
 
 export default Objeto3D;
