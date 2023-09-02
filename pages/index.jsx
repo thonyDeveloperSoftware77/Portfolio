@@ -128,15 +128,15 @@ export default function Home() {
                 </div>
               </div>
             </>
-          ) : opciones === 1 ? (
+          ) : opciones === 5 ? (
             <div>
               <ThreeScene2 componente={SectionProjects} />
             </div>
-          ) : opciones === 2 ? (
+          ) : opciones === 5 ? (
             <div>
               <ThreeScene2 componente={SectionSkills} />
             </div>
-          ) : opciones === 3 ? (
+          ) : opciones === 5 ? (
             <div>
               <ThreeScene2 componente={SectionAboutMe} />
             </div>
