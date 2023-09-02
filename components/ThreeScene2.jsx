@@ -52,10 +52,6 @@ const ThreeScene2 = (props) => {
 
     //Añade la textura a el background
     const loaderBackEscene = new THREE.TextureLoader()
-    loaderBackEscene.load('./rectangle.png', (texture) => {
-      scene.background = texture
-    })
-
     // Crea una cámara y establece su posición
     const camera = new THREE.PerspectiveCamera(
       75,

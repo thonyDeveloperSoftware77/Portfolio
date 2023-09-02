@@ -46,10 +46,6 @@ const ThreeScene = () => {
 
     //Añade la textura a el background
     const loaderBackEscene = new THREE.TextureLoader()
-    loaderBackEscene.load('./rectangle.png', (texture) => {
-      scene.background = texture
-    })
-
     let modelo;
     let animations;
     let mixers;
