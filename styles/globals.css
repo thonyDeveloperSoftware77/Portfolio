@@ -962,8 +962,9 @@ section img:hover {
   }
 
   .CardContainer {
+    top: 45%;
     width: 80%;
-    height: 60%;
+    height: 72%;
   }
 
   .imageStart{
