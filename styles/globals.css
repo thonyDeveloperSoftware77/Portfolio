@@ -879,6 +879,19 @@ section img:hover {
     /* Corregido: utiliza transform para aplicar la escala */
   }
 
+  .hexagon {
+    width: 75px;
+    height: 55px;
+    /* Corregido: utiliza transform para aplicar la escala */
+  }
+
+  .hexagonContent {
+    margin: 4px;
+    width: 67px;
+    height: 47px;
+    /* Corregido: utiliza transform para aplicar la escala */
+  }
+
   .top {
     top: -54%;
     left: 30%;
@@ -948,8 +961,13 @@ section img:hover {
     transform: rotate(66deg) translate(-100px);
   }
 
-  .CardContainer{
+  .CardContainer {
     width: 80%;
     height: 70%;
+  }
+
+  .imageStart img {
+    width: 200px !important;
+    height: 255px !important;
   }
 }
