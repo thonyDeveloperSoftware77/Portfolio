@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500&family=Tilt+Prism&display=swap');
+
 html,
 body {
   padding: 0;
@@ -8,6 +9,277 @@ body {
   overflow: hidden;
 }
 
+
+.NameContainer {
+  z-index: 6;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #02abe4;
+  text-shadow: 10px 5px 20px rgb(0, 0, 0);
+  pointer-events: none;
+  font-weight: 900;
+
+}
+
+.hexagonContent {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  color: white;
+}
+
+.NameContainer h1 {
+  font-size: 2.8em;
+  font-family: 'Tilt Prism', cursive;
+  margin: 0;
+  /* Glass effect */
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+}
+
+/*PARA START CONTAINER*/
+.StartContainer {
+  position: fixed;
+  width: 100%;
+  /*
+* Created with https://www.css-gradient.com
+* Gradient link: https://www.css-gradient.com/?c1=010101&c2=221929&gt=r&gd=dcc
+*/
+  background: #010101;
+  background: radial-gradient(at center, #010101, #221929);
+  height: 100vh;
+  color: white;
+  top: 0%;
+  right: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.CardContainer {
+  position: fixed;
+  width: 30%;
+  height: 50%;
+  color: white;
+  top: 0%;
+  right: 0;
+  left: 0;
+  z-index: 6;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Glass effect */
+  background-image: linear-gradient(to right, #000000bc, #202020b9, #3a3a3a95, #5757574a, #75757539);
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px 1px 1px 1px solid rgba(255, 255, 255, 0.5);
+  /* Efecto de sombra */
+  box-shadow: 1px 2px 7px rgba(183, 191, 206, 0.14);
+}
+
+
+.imageStart {
+  /*Centra a horizontalmente*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.circle {
+  position: absolute;
+  top: 6%;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  border-radius: 50%;
+  background-color: rgba(201, 201, 201, 0.5);
+  z-index: -1;
+}
+
+
+.hexagon {
+  position: absolute;
+  width: 100px;
+  background-color: #5ad1cd;
+  height: 77.74px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  transition: background-color 1s ease, transform 0.5s ease;
+  /* Agregado transition */
+
+}
+
+.hexagon:hover {
+  background-color: #edf0f1;
+  transform: scale(1.2);
+  /* Corregido: utiliza transform para aplicar la escala */
+}
+
+.hexagonContent {
+  margin: 5px;
+  position: absolute;
+  width: 90px;
+  background-color: #0f3430;
+  height: 67.74px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+.dashed-line {
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  width: 200px;
+  height: 0;
+  border-top: 2px dashed rgb(222, 222, 222);
+  transform-origin: 0 0;
+  z-index: -1;
+}
+
+
+
+.topLine {
+  width: 85px;
+  top: 10%;
+  transform: rotate(90deg) translate(-100px);
+}
+
+.leftLine {
+  width: 90px;
+  top: 7%;
+  left: -66%;
+  transform: rotate(25deg) translate(100px);
+}
+
+.rightLine {
+  width: 90px;
+  top: 19%;
+  left: 133%;
+  transform: rotate(-25deg) translate(-100px);
+  z-index: -100;
+}
+
+.leftBottomLine {
+  top: 95%;
+  left: -22%;
+  transform: rotate(140deg) translate(-100px);
+
+}
+
+.rightBottomLine {
+  width: 140px;
+  top: 125%;
+  left: 165%;
+  transform: rotate(220deg) translate(100px);
+}
+
+.bottomLine {
+  top: 100%;
+  transform: rotate(90deg) translate(-100px);
+}
+
+
+
+.top {
+  top: -50%;
+  left: 30%;
+  background-color: #84cdfa;
+}
+
+.left {
+  top: 1%;
+  left: -70%;
+  background-color: #FC9C46;
+}
+
+.right {
+  top: 1%;
+  left: 130%;
+  background-color: #9b59b6;
+}
+
+.left-bottom {
+  top: 95%;
+  left: -70%;
+  background-color: #73D08A;
+}
+
+.right-bottom {
+  top: 95%;
+  left: 130%;
+  background-color: tomato;
+}
+
+.bottom {
+  top: 120%;
+  left: 30%;
+  background-color: thistle;
+}
+
+
+
+.top:hover+.topLine {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  background-color: #02abe4;
+}
+
+.left:hover+.leftLine {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  background-color: #FC9C46;
+}
+
+.right:hover+.rightLine {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  background-color: #9b59b6;
+}
+
+.left-bottom:hover+.leftBottomLine {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  background-color: #73D08A;
+}
+
+.right-bottom:hover+.rightBottomLine {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  background-color: tomato;
+}
+
+.bottom:hover+.bottomLine {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  background-color: #02abe4;
+}
+
+
+.imageStart img:hover+.circle {
+  /* Cambia el color de fondo de .other-element cuando .hexagon está en estado de hover */
+  animation: change-color 5s infinite;
+}
+
+@keyframes change-color {
+  0% {
+    background-color: #02abe4;
+  }
+
+  25% {
+    background-color: #9b59b6;
+  }
+
+  50% {
+    background-color: #FC9C46;
+  }
+
+  75% {
+    background-color: #edf0f1;
+  }
+
+  100% {
+    background-color: #73D08A;
+  }
+}
 
 .titleSection {
   color: white;
@@ -46,11 +318,13 @@ body {
   pointer-events: none;
 
 }
-h1{
-  
+
+h1 {
+
   font-weight: 500;
   font-family: 'Montserrat', sans-serif;
 }
+
 .boxSectionResponsive {
   display: flex;
   flex-direction: row;
@@ -153,6 +427,7 @@ a {
   justify-content: space-around;
 
 }
+
 .boxOptions a {
   margin-top: 20px;
 }
@@ -207,7 +482,7 @@ a {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background-color:rgb(64, 119, 196);
+  background-color: rgb(64, 119, 196);
   color: white;
   position: relative;
   overflow: hidden;
@@ -222,7 +497,7 @@ a {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background-color:  rgb(13, 14, 22);
+  background-color: rgb(13, 14, 22);
   animation: wave 0.7s linear;
 }
 
@@ -241,12 +516,14 @@ a {
     height: 0;
     opacity: 1;
   }
+
   100% {
     width: 400px;
     height: 400px;
     opacity: 0;
   }
 }
+
 /*STYLES FOR GRID CONTAINER (FRAMEWORKS SECTION)*/
 
 .gridSection {
@@ -481,9 +758,10 @@ section img:hover {
 }
 
 @media (max-width: 800px) {
-  .contenedorSeccionesAbout{
+  .contenedorSeccionesAbout {
     margin-top: 0px;
   }
+
   .boxSectionResponsive {
     display: flex;
     flex-direction: column;
@@ -594,4 +872,84 @@ section img:hover {
   }
 
 
+  /*Para Start*/
+
+  .hexagon:hover {
+    transform: scale(1.1);
+    /* Corregido: utiliza transform para aplicar la escala */
+  }
+
+  .top {
+    top: -54%;
+    left: 30%;
+    background-color: #84cdfa;
+  }
+
+  .left {
+    top: -30%;
+    left: -15%;
+  }
+
+  .right {
+    top: -30%;
+    left: 79%;
+    background-color: #9b59b6;
+  }
+
+  .left-bottom {
+    top: 110%;
+    left: -18%;
+    background-color: rgb(5, 114, 78);
+  }
+
+  .right-bottom {
+    top: 110%;
+    left: 80%;
+    background-color: tomato;
+  }
+
+  .bottom {
+    top: 125%;
+    left: 30%;
+    background-color: thistle;
+  }
+
+  /*Para lineas*/
+  .topLine {
+    width: 90px;
+    top: 7%;
+  }
+
+  .leftLine {
+    width: 50px;
+    top: -35%;
+    left: 0%;
+    transform: rotate(70deg) translate(100px);
+  }
+
+  .rightLine {
+    width: 60px;
+    top: -35%;
+    left: 105%;
+    transform: rotate(115deg) translate(100px);
+    z-index: -100;
+  }
+
+  .leftBottomLine {
+    top: 90%;
+    left: 15%;
+    transform: rotate(100deg) translate(-100px);
+
+  }
+
+  .rightBottomLine {
+    top: 100%;
+    left: 87%;
+    transform: rotate(66deg) translate(-100px);
+  }
+
+  .CardContainer{
+    width: 80%;
+    height: 70%;
+  }
 }
