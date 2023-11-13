@@ -963,15 +963,23 @@ section img:hover {
 
   .CardContainer {
     width: 80%;
-    height: 70%;
+    height: 60%;
   }
 
   .imageStart{
-    top: 48%;
+    top: 45%;
   }
   .imageStart img {
     
-    width: 190px !important;
-    height: 235px !important;
+    width: 180px !important;
+    height: 225px !important;
+  }
+
+  .NameContainer{
+    top: 55%;
+  }
+  .NameContainer h1{
+    font-size: 2.5em;
+    text-align: center;
   }
 }
