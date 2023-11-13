@@ -893,7 +893,7 @@ section img:hover {
   }
 
   .top {
-    top: -54%;
+    top: -60%;
     left: 30%;
     background-color: #84cdfa;
   }
@@ -966,8 +966,12 @@ section img:hover {
     height: 70%;
   }
 
+  .imageStart{
+    top: 48%;
+  }
   .imageStart img {
-    width: 200px !important;
-    height: 255px !important;
+    
+    width: 190px !important;
+    height: 235px !important;
   }
 }
