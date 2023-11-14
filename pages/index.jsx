@@ -96,7 +96,7 @@ export default function Home() {
           [4]: false,
           [5]: false,
         }));
-      }, 600);
+      }, 580);
 
     }
     setOpcionesCv(prevState => ({
@@ -268,20 +268,20 @@ export default function Home() {
                   <center>
                     <h2>PROFILE</h2>
                     <br />
-                    <p>Como apasionado del mundo tecnológico, he adquirido una amplia gama de 
-                      habilidades que abarcan desde el desarrollo de aplicaciones web y móviles 
+                    <p>Como apasionado del mundo tecnológico, he adquirido una amplia gama de
+                      habilidades que abarcan desde el desarrollo de aplicaciones web y móviles
                       multiplataforma, hasta el diseño de interfaces de usuario
-                       y la edición. 
-                       <br />
-                       <br />
-                       Mi experiencia también se extiende al manejo de arquitecturas para
-                       desarrollar software de calidad, así como a la gestión de proyectos, 
-                       bases de datos  y hacking ético. He trabajado en varios proyectos, 
-                       manteniéndome siempre al día con las tecnologías más actuales. 
-                       <br />
-                       <br />
-                       Mi objetivo es utilizar estas habilidades para crear soluciones innovadoras 
-                       y efectivas en el campo de la tecnología.</p>
+                      y la edición.
+                      <br />
+                      <br />
+                      Mi experiencia también se extiende al manejo de arquitecturas para
+                      desarrollar software de calidad, así como a la gestión de proyectos,
+                      bases de datos  y hacking ético. He trabajado en varios proyectos,
+                      manteniéndome siempre al día con las tecnologías más actuales.
+                      <br />
+                      <br />
+                      Mi objetivo es utilizar estas habilidades para crear soluciones innovadoras
+                      y efectivas en el campo de la tecnología.</p>
                     <p></p>
                   </center>
                 </div>
@@ -407,6 +407,27 @@ export default function Home() {
                   <br />
                   <p>
                     Sistema de Auditorías AuditSafe Consulting
+                  </p>
+                  <p>
+                    Desarrollo de un sistema completo de auditorías de control interno,
+                    permite identificar el nivel de desarrollo de cada uno de los componentes funcionales
+                    en instituciones públicas, evaluaciones, generación de reportes, mapas de riesgo y planes de mejoramiento.
+                    Institucuones Evaluadas con el software:
+                    <br />
+                    Prefectura de Tungurahua
+                    <br />
+                    Cuerpo de Bomberos del Cantón Guamote
+                    <br />
+                    Próximamente: Aeropuerto de Quito
+                  </p>
+                  <br />
+                  <br />
+                  <p>
+                    Price Pilot
+                  </p>
+                  <p>
+                    Desarrollo una aplicación para buscar juegos con los precios más
+                    bajos  en tiempo real de tiendas de videojuegos conocidas mundialmente
                   </p>
                 </center>
               </div>) : (<></>)}
