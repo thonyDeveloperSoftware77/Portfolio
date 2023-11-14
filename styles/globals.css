@@ -9,6 +9,19 @@ body {
   overflow: hidden;
 }
 
+button {
+  all: unset;
+}
+
+.buttonExit{
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+
+
+
 
 .NameContainer {
   z-index: 6;
@@ -59,27 +72,57 @@ body {
 }
 
 .CardContainer {
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   position: fixed;
-  width: 30%;
-  height: 50%;
+  width: 27%;
+  height: 80%;
   color: white;
-  top: 0%;
   right: 0;
   left: 0;
   z-index: 6;
   position: absolute;
-  top: 50%;
+  top: 48%;
   left: 50%;
   transform: translate(-50%, -50%);
   /* Glass effect */
   background-image: linear-gradient(to right, #000000bc, #202020b9, #3a3a3a95, #5757574a, #75757539);
   border-radius: 10px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(4px);
   border: 1px 1px 1px 1px solid rgba(255, 255, 255, 0.5);
   /* Efecto de sombra */
   box-shadow: 1px 2px 7px rgba(183, 191, 206, 0.14);
 }
+
+
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+
+@keyframes fadeOffw {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
+
+
+
+
+.CardContainer {
+  animation: fadeIn 1s;
+}
+
+
+
+.Inactive {
+  animation: fadeOffw 0.6s;
+}
+
 
 
 .imageStart {
@@ -302,8 +345,8 @@ body {
 
 
 .subtitleSection {
-  color: rgb(64, 119, 196);
-  text-shadow: 0 0 10px rgb(34, 55, 192);
+  color: #02abe4;
+  text-shadow: 0 0 10px rgb(34, 97, 192);
   font-size: 2em;
   font-weight: 300;
   margin-top: 20px;
@@ -454,12 +497,34 @@ a {
 }
 
 .selectedOption {
-  color: rgb(62, 125, 174);
+  color: #02abe4;
   font-weight: 500;
   font-size: 20px;
   text-shadow: 0 0 10px rgb(161, 161, 161);
 }
 
+
+.flexContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.flexRow{
+  font-size: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.txtLeft{
+  text-align: left;
+}
+
+.txtRigth{
+  text-align: right;
+
+}
 
 
 .contenedorSeccionesAbout {
@@ -964,7 +1029,7 @@ section img:hover {
   .CardContainer {
     top: 45%;
     width: 80%;
-    height: 72%;
+    height: 70%;
   }
 
   .imageStart{
