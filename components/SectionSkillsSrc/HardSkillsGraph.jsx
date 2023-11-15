@@ -14,22 +14,30 @@ const HardSkillsGraph = (props) => {
 
   const data = {
     nodes: [
-      { id: "Responsable" },
-      { id: "Trabajo en Equipo" },
-      { id: "Tolerante al Estrés" },
-      { id: "Sed de Aprender" },
-      { id: "Perfeccionista" },
-      { id: "Creativo" },
+      { id: "Desarrollo de Páginas web" },
+      { id: "Desarrollo de Aplicaciones Web" },
+      { id: "Desarrollo de Aplicaciones Móviles" },
+      { id: "Diseño de Prototitipos" },
+      { id: "Arquitecturas de software" },
+      { id: "Bases de datos" },
+      { id: "Levantamiento de Requisitos" },
+      { id: "Hacking Ético" },
+      { id: "Despliegue de Aplicaciones en la nube" },
+      { id: "Edición de video" },
 
       { id: 0, name: 'Lenguajes de Programación', type: "Category", label: "." },
     ],
     links: [
-      { source: "Responsable", target: 0, distance: 6 },
-      { source: "Trabajo en Equipo", target: 0, distance: 6 },
-      { source: "Tolerante al Estrés", target: 0, distance: 6 },
-      { source: "Sed de Aprender", target: 0, distance: 6 },
-      { source: "Perfeccionista", target: 0, distance: 6 },
-      { source: "Creativo", target: 0, distance: 6 },
+      { source: "Desarrollo de Páginas web", target: 0, distance: 6 },
+      { source: "Desarrollo de Aplicaciones Web", target: 0, distance: 6 },
+      { source: "Desarrollo de Aplicaciones Móviles", target: 0, distance: 6 },
+      { source: "Diseño de Prototitipos", target: 0, distance: 6 },
+      { source: "Arquitecturas de software", target: 0, distance: 6 },
+      { source: "Bases de datos", target: 0, distance: 6 },
+      { source: "Levantamiento de Requisitos", target: 0, distance: 6 },
+      { source: "Hacking Ético", target: 0, distance: 6 },
+      { source: "Despliegue de Aplicaciones en la nube", target: 0, distance: 6 },
+      { source: "Edición de video", target: 0, distance: 6 },
 
     ],
   };
@@ -38,8 +46,8 @@ const HardSkillsGraph = (props) => {
     const sprite = new SpriteText(node.label ? node.label : node.id, 5);
     sprite.color = "#ffffff";
     sprite.backgroundColor = "transparent";
-    sprite.backgroundColor = "#90024c";
-    sprite.borderColor = "#65B5FF";
+    sprite.backgroundColor = "#00000";
+    sprite.borderColor = "#9b59b6";
     sprite.borderWidth = 0;
     sprite.padding = [8, 4];
     sprite.textHeight = 5;

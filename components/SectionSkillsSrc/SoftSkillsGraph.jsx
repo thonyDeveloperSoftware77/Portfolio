@@ -38,8 +38,8 @@ const SoftSkillsGraph = (props) => {
     const sprite = new SpriteText(node.label ? node.label : node.id, 5);
     sprite.color = "#ffffff";
     sprite.backgroundColor = "transparent";
-    sprite.backgroundColor = "#90024c";
-    sprite.borderColor = "#65B5FF";
+    sprite.backgroundColor = "#000000";
+    sprite.borderColor = "#02abe4";
     sprite.borderWidth = 0;
     sprite.padding = [8, 4];
     sprite.textHeight = 5;

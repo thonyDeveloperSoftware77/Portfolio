@@ -155,6 +155,85 @@ export default function Home() {
     labels: ["Ingles"],
   };
 
+
+  const seriesSkills = [{
+    data: [100, 100, 80, 75, 75, 75, 25]
+  }];
+
+  const optionSkills = {
+    chart: {
+      type: 'bar',
+      height: 380
+    },
+    plotOptions: {
+      bar: {
+        barHeight: '100%',
+        distributed: true,
+        horizontal: true,
+        dataLabels: {
+          position: 'bottom'
+        },
+      }
+    },
+    fill: {
+      type: 'gradient',
+      gradient: {
+        shade: 'dark',
+        type: "horizontal",
+        shadeIntensity: 0.5,
+        gradientToColors: ['#84cdfa', '#287271', '#73D08A', '#E9C46A', '#F4A264', 'rgb(238, 89, 63)', '#ca2ad2'],
+        inverseColors: true,
+        opacityFrom: 1,
+        opacityTo: 1,
+        stops: [0, 100]
+      },
+    },
+    colors: ['#1c323b', '#1b4c4b', '#20796e', '#bea157', '#d18b55', '#c45d44', '#922198'],
+    dataLabels: {
+      enabled: true,
+      textAnchor: 'start',
+      style: {
+        colors: ['#fff']
+      },
+      formatter: function (val, opt) {
+        return opt.w.globals.labels[opt.dataPointIndex]
+      },
+      offsetX: 0,
+      dropShadow: {
+        enabled: true
+      }
+    },
+    stroke: {
+      width: 1,
+      colors: ['#fff']
+    },
+    xaxis: {
+      categories: ['Creación o rediseño de Páginas Web ', 'Desarrollo de aplicaciones Web personalizadas', 'Planificación de proyectos de software', 'Desarrollo de aplicaciones Móviles', 'Prototipado de interfaces', 'Despliegue de Aplicaciones en Nube', 'Hacking Ético'],
+      labels: {
+        show: false
+      },
+      max: 100
+    },
+    yaxis: {
+      labels: {
+        show: false
+      }
+    },
+    tooltip: {
+      theme: 'dark',
+      x: {
+        show: true
+      },
+      y: {
+        title: {
+          formatter: function () {
+            return ''
+          }
+        }
+      }
+    }
+  }
+
   const seriesLanguage = [70];
 
   return (
@@ -216,42 +295,42 @@ export default function Home() {
 
                   <div class="hexagon top" onClick={() => handleClickOpcionesCv(0)} >
                     <div class="hexagonContent">
-                      <FiUser size={35} />
+                      <FiUser size={30} />
                     </div>
                   </div>
                   <div class="dashed-line topLine"></div>
 
                   <div class="hexagon left" onClick={() => handleClickOpcionesCv(2)}>
                     <div class="hexagonContent">
-                      <BsBookmarkStar size={35} />
+                      <BsBookmarkStar size={30} />
                     </div>
                   </div>
                   <div class="dashed-line leftLine"></div>
 
                   <div class="hexagon right" onClick={() => handleClickOpcionesCv(1)}>
                     <div class="hexagonContent">
-                      <FaUniversity size={35} />
+                      <FaUniversity size={30} />
                     </div>
                   </div>
                   <div class="dashed-line rightLine"></div>
 
                   <div class="hexagon left-bottom" onClick={() => handleClickOpcionesCv(3)}>
                     <div class="hexagonContent">
-                      <AiOutlineTrophy size={35} />
+                      <AiOutlineTrophy size={30} />
                     </div>
                   </div>
                   <div class="dashed-line leftBottomLine"></div>
 
                   <div class="hexagon right-bottom" onClick={() => handleClickOpcionesCv(4)}>
                     <div class="hexagonContent">
-                      <MdWorkOutline size={35} />
+                      <MdWorkOutline size={30} />
                     </div>
                   </div>
                   <div class="dashed-line rightBottomLine"></div>
 
                   <div class="hexagon bottom" onClick={() => handleClickOpcionesCv(5)}>
                     <div class="hexagonContent">
-                      <FaLanguage size={35} />
+                      <FaLanguage size={30} />
                     </div>
                   </div>
                   <div class="dashed-line bottomLine"></div>
@@ -266,8 +345,7 @@ export default function Home() {
                     <BiExit size={25} />
                   </button>
                   <center>
-                    <h2>PROFILE</h2>
-                    <br />
+                    <h2><FiUser size={25} />  PROFILE</h2>
                     <p>Como apasionado del mundo tecnológico, he adquirido una amplia gama de
                       habilidades que abarcan desde el desarrollo de aplicaciones web y móviles
                       multiplataforma, hasta el diseño de interfaces de usuario
@@ -283,19 +361,27 @@ export default function Home() {
                       Mi objetivo es utilizar estas habilidades para crear soluciones innovadoras
                       y efectivas en el campo de la tecnología.</p>
                     <p></p>
+                    <div>
+                      <ApexCharts
+                        options={optionSkills}
+                        series={seriesSkills}
+                        type="bar"
+                        height={350}
+                      />
+                    </div>
                   </center>
                 </div>
               ) : (<></>)}
               {opcionesCv[1] ? (<div className={`CardContainer ${salir ? 'Inactive' : ''}`}>
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
-                  <h2>EDUCATION</h2>
-                  <p>Formación</p>
+                  <h2><FaUniversity size={20} />  EDUCATION</h2>
+                  <p style={{backgroundColor: "#9b59b6"}}>Formación</p>
                   <p>Ingeniería de Software - UDLA</p>
                   <img src="/img/udla.png" alt="Vercel Logo" width={94} height={49} />
 
                   <br />
-                  <p>Certificados</p>
+                  <p style={{backgroundColor: "#9b59b6"}}>Certificados</p>
                   <div className='flexContainer'>
                     <div className='flexRow'>
                       <div className='txtLeft'>
@@ -378,10 +464,10 @@ export default function Home() {
               {opcionesCv[2] ? (<div className={`CardContainer ${salir ? 'Inactive' : ''}`}>
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
-                  <h2>SKILLS</h2>
-                  <p>Soft Skills</p>
+                  <h2><BsBookmarkStar size={20} />  SKILLS</h2>
+                  <p >Soft Skills</p>
                   <SoftSkillsGraph />
-                  <p>Hard Skills</p>
+                  <p >Hard Skills</p>
                   <HardSkillsGraph />
                 </center>
               </div>) : (<></>)}
@@ -389,45 +475,53 @@ export default function Home() {
               {opcionesCv[3] ? (<div className={`CardContainer ${salir ? 'Inactive' : ''}`}>
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
-                  <h2>ACHIEVEMENTS</h2>
-                  <h3>Logros Académicos</h3>
-                  <p>Certificado de Reconocimiento de UDLA por autoaprendizaje de cursos de software en Udemy Business</p>
-                  <p>Diploma de distinción: 1er Escolta del Pabellón Nacional</p>
-                  <h3>Logros Personales</h3>
-                  <p>Partícipe del título de campeones en dos ocasiones consecutivas con los equipos de fútbol Racing y Sao Paulo en Santa Elena.</p>
-                  <p>Demostrar mis habilidades musicales tocando la guitarra eléctrica en varios eventos escolares, lo cual ha sido una experiencia enriquecedora y gratificante</p>
-                  <p>Ganador de concursos de Dibujo</p>
+                  <h2><AiOutlineTrophy size={18} />  ACHIEVEMENTS</h2>
+                  <p style={{backgroundColor: "#73D08A", color:"black"}}>Logros Académicos</p>
+                  <p className='txtJustify'>‣Certificado de Reconocimiento de UDLA por autoaprendizaje de cursos de software en Udemy Business</p>
+                  <p className='txtJustify'>‣Diploma de distinción: 1er Escolta del Pabellón Nacional</p>
+                  <br />
+                  <br />
+                  <p style={{backgroundColor: "#73D08A", color:"black"}}>Logros Personales</p>
+                  <p className='txtJustify'>‣Partícipe del título de campeones en dos ocasiones consecutivas con los equipos de fútbol Racing y Sao Paulo en Santa Elena.</p>
+                  <p className='txtJustify'>‣Demostrar mis habilidades musicales tocando la guitarra eléctrica en varios eventos escolares, lo cual ha sido una experiencia enriquecedora y gratificante</p>
+                  <p className='txtJustify'>‣Ganador de concursos de Dibujo</p>
                 </center>
               </div>) : (<></>)}
 
-              {opcionesCv[4] ? (<div className={`CardContainer ${salir ? 'Inactive' : ''}`}>
+              {opcionesCv[4] ? (<div className={`CardContainer overScroll ${salir ? 'Inactive' : ''}`}>
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
-                  <h2>WORK EXPERIENCE</h2>
+                  <h2><MdWorkOutline size={20}/>  WORK EXPERIENCE</h2>
                   <br />
-                  <p>
+                  <p style={{backgroundColor: "#9b59b6"}}>
                     Sistema de Auditorías AuditSafe Consulting
                   </p>
-                  <p>
+                  <p className='txtJustify'>
                     Desarrollo de un sistema completo de auditorías de control interno,
                     permite identificar el nivel de desarrollo de cada uno de los componentes funcionales
                     en instituciones públicas, evaluaciones, generación de reportes, mapas de riesgo y planes de mejoramiento.
-                    Institucuones Evaluadas con el software:
                     <br />
-                    Prefectura de Tungurahua
                     <br />
-                    Cuerpo de Bomberos del Cantón Guamote
+                    <center>
+                      Instituciones Evaluadas con el software:
+                    </center>
+                  </p>
+                  <p className='txtLeft'>
                     <br />
-                    Próximamente: Aeropuerto de Quito
+                    ‣Prefectura de Tungurahua
+                    <br />
+                    ‣Cuerpo de Bomberos del Cantón Guamote
+                    <br />
+                    ‣Próximamente: Aeropuerto de Quito
                   </p>
                   <br />
                   <br />
-                  <p>
+                  <p style={{backgroundColor: "#9b59b6"}}>
                     Price Pilot
                   </p>
-                  <p>
+                  <p className='txtJustify'>
                     Desarrollo una aplicación para buscar juegos con los precios más
-                    bajos  en tiempo real de tiendas de videojuegos conocidas mundialmente
+                    bajos  en tiempo real de tiendas de videojuegos conocidas mundialmente.
                   </p>
                 </center>
               </div>) : (<></>)}
@@ -435,7 +529,7 @@ export default function Home() {
               {opcionesCv[5] ? (<div className={`CardContainer ${salir ? 'Inactive' : ''}`}>
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
-                  <h2>LANGUAGES</h2>
+                  <h2><FaLanguage size={25} /> LANGUAGES</h2>
                   <div>
                     <ApexCharts
                       options={optionsNivelRiesgo}

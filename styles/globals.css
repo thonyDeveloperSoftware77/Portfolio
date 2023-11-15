@@ -70,7 +70,6 @@ button {
   left: 0;
   z-index: 5;
 }
-
 .CardContainer {
   padding: 10px;
   padding-left: 15px;
@@ -96,7 +95,9 @@ button {
   box-shadow: 1px 2px 7px rgba(183, 191, 206, 0.14);
 }
 
-
+.iconTitle{
+  margin-top: 15px;
+}
 
 @keyframes fadeIn {
   0% {opacity: 0;}
@@ -252,10 +253,14 @@ button {
   background-color: #73D08A;
 }
 
+
+.overScroll{
+  overflow: auto;
+}
 .right-bottom {
   top: 95%;
   left: 130%;
-  background-color: tomato;
+  background-color: rgb(249, 77, 47);
 }
 
 .bottom {
@@ -523,7 +528,10 @@ a {
 
 .txtRigth{
   text-align: right;
+}
 
+.txtJustify{
+  text-align: justify;
 }
 
 
@@ -1030,8 +1038,16 @@ section img:hover {
     top: 45%;
     width: 80%;
     height: 70%;
+    
   }
 
+  p{
+    font-size: 14px;
+  }
+
+  .txtLeft, .txtRigth{
+    font-size: 13px;
+  }
   .imageStart{
     top: 45%;
   }
