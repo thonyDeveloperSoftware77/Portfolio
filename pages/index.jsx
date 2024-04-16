@@ -376,12 +376,12 @@ export default function Home() {
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
                   <h2><FaUniversity size={20} />  EDUCATION</h2>
-                  <p style={{backgroundColor: "#9b59b6"}}>Formación</p>
+                  <p style={{ backgroundColor: "#9b59b6" }}>Formación</p>
                   <p>Ingeniería de Software - UDLA</p>
                   <img src="/img/udla.png" alt="Vercel Logo" width={94} height={49} />
 
                   <br />
-                  <p style={{backgroundColor: "#9b59b6"}}>Certificados</p>
+                  <p style={{ backgroundColor: "#9b59b6" }}>Certificados</p>
                   <div className='flexContainer'>
                     <div className='flexRow'>
                       <div className='txtLeft'>
@@ -476,12 +476,12 @@ export default function Home() {
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
                   <h2><AiOutlineTrophy size={18} />  ACHIEVEMENTS</h2>
-                  <p style={{backgroundColor: "#73D08A", color:"black"}}>Logros Académicos</p>
+                  <p style={{ backgroundColor: "#73D08A", color: "black" }}>Logros Académicos</p>
                   <p className='txtJustify'>‣Certificado de Reconocimiento de UDLA por autoaprendizaje de cursos de software en Udemy Business</p>
                   <p className='txtJustify'>‣Diploma de distinción: 1er Escolta del Pabellón Nacional</p>
                   <br />
                   <br />
-                  <p style={{backgroundColor: "#73D08A", color:"black"}}>Logros Personales</p>
+                  <p style={{ backgroundColor: "#73D08A", color: "black" }}>Logros Personales</p>
                   <p className='txtJustify'>‣Partícipe del título de campeones en dos ocasiones consecutivas con los equipos de fútbol Racing y Sao Paulo en Santa Elena.</p>
                   <p className='txtJustify'>‣Demostrar mis habilidades musicales tocando la guitarra eléctrica en varios eventos escolares, lo cual ha sido una experiencia enriquecedora y gratificante</p>
                   <p className='txtJustify'>‣Ganador de concursos de Dibujo</p>
@@ -491,9 +491,9 @@ export default function Home() {
               {opcionesCv[4] ? (<div className={`CardContainer overScroll ${salir ? 'Inactive' : ''}`}>
                 <button className='buttonExit' onClick={() => handleClickOpcionesCv(6)} ><BiExit size={25} /></button>
                 <center>
-                  <h2><MdWorkOutline size={20}/>  WORK EXPERIENCE</h2>
+                  <h2><MdWorkOutline size={20} />  WORK EXPERIENCE</h2>
                   <br />
-                  <p style={{backgroundColor: "#9b59b6"}}>
+                  <p style={{ backgroundColor: "#9b59b6" }}>
                     Sistema de Auditorías AuditSafe Consulting
                   </p>
                   <p className='txtJustify'>
@@ -512,16 +512,17 @@ export default function Home() {
                     <br />
                     ‣Cuerpo de Bomberos del Cantón Guamote
                     <br />
+                    -Municipio de Portoviejo
+                    <br />
                     ‣Próximamente: Aeropuerto de Quito
                   </p>
                   <br />
                   <br />
-                  <p style={{backgroundColor: "#9b59b6"}}>
-                    Price Pilot
+                  <p style={{ backgroundColor: "#9b59b6" }}>
+                    Cellarius 
                   </p>
                   <p className='txtJustify'>
-                    Desarrollo una aplicación para buscar juegos con los precios más
-                    bajos  en tiempo real de tiendas de videojuegos conocidas mundialmente.
+                    Desarrollo una aplicación para control remoto de dispositivo móviles para venta de celulares a crédito
                   </p>
                 </center>
               </div>) : (<></>)}
